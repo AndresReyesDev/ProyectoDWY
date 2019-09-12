@@ -5,65 +5,72 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lumen/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link rel="stylesheet" href="/assets/css/custom.css">
     <title>Equipo — Libro de Saludos DuocUC</title>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/index.html">Libro de Saludos</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/index.html">Libro de Saludos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/index.html">Portada</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/about.html">Nuestro Equipo <span class="sr-only">(actual)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/add.html">Añadir Saludos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/list.html">Ver Saludos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contacto</a>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Portada</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about.html">Nuestro Equipo <span class="sr-only">(actual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/add.html">Añadir Saludos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/list.html">Ver Saludos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="main">
+        <div class="row justify-content-md-center">
+            <div class="col-12 text-center my-5">
+                <p class="display-4">Este es el equipo desarrollador</p>
+                <hr class="w-25" />
+                <p class="lead">Somos un equipo eficaz donde hay pocas ganas, cero conocimiento y cero empatía.</p>
+            </div>
+            <div class="col-4">
+                <img src="/assets/img/avatar.png" class="pobrediablo img-fluid img-thumbnail rounded-circle" />
+                <p class="lead text-center">Daniel Bustamante</p>
+            </div>
+            <div class="col-4">
+                <img src="/assets/img/avatar.png" class="pobrediablo img-fluid img-thumbnail rounded-circle" />
+                <p class="lead text-center">Carlos Lizana</p>
+            </div>
+            <div class="col-4">
+                <img src="/assets/img/avatar.png" class="pobrediablo img-fluid img-thumbnail rounded-circle" />
+                <p class="lead text-center">Andrés Reyes</p>
+            </div>
+        </div>
     </div>
-</nav>
 
-<div class="container" id="main">
-    <div class="row justify-content-md-center">
-        <div class="col-12 text-center my-5">
-            <p class="display-4">Este es el equipo desarrollador</p>
-            <hr class="w-25"/>
-            <p class="lead">Somos un equipo eficaz donde hay pocas ganas, cero conocimiento y cero empatía.</p>
-        </div>
-        <div class="col-4">
-            <img src="/assets/img/avatar.png" class="img-fluid img-thumbnail rounded-circle"/>
-            <p class="lead text-center">Daniel Bustamante</p>
-        </div>
-        <div class="col-4">
-            <img src="/assets/img/avatar.png" class="img-fluid img-thumbnail rounded-circle"/>
-            <p class="lead text-center">Carlos Lizana</p>
-        </div>
-        <div class="col-4">
-            <img src="/assets/img/avatar.png" class="img-fluid img-thumbnail rounded-circle"/>
-            <p class="lead text-center">Andrés Reyes</p>
-        </div>
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="/assets/js/custom.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(".pobrediablo").hover(function () {
+            $(this).addClass('animated tada');
+        });
+        $(".pobrediablo").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
+            $(this).removeClass('animated tada');
+        });
+    </script>
 </body>
 
 </html>

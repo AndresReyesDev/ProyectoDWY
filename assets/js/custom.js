@@ -65,3 +65,4 @@ $("#contact-form").validate({
         $(element).addClass("is-valid").removeClass("is-invalid");
     }
 });
+
