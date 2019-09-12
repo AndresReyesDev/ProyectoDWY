@@ -45,34 +45,34 @@
             <p class="lead">Llena el siguiente formulario de contacto y recibe respuesta dentro de las próximas horas.
                 Su opinión es sumamente importante para nuestro equipo.</p>
             <hr/>
-            <form>
+            <form id="contact-form" method="post" action="">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="txtFirstName">Nombre</label>
-                        <input type="email" class="form-control" id="txtFirstName" name="txtFirstName"
-                               placeholder="Escriba su Nombre">
+                        <input type="text" class="form-control" id="txtFirstName" name="txtFirstName"
+                               placeholder="Escriba su Nombre" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="txtLastName">Apellido</label>
-                        <input type="email" class="form-control" id="txtLastName" name="txtLastName"
-                               placeholder="Escriba su Apellido">
+                        <input type="text" class="form-control" id="txtLastName" name="txtLastName"
+                               placeholder="Escriba su Apellido" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputAddress">Dirección</label>
-                    <input type="text" class="form-control" id="inputAddress"
-                           placeholder="Ejemplo: Calle Siempreviva 742">
+                    <label for="txtAddress">Dirección</label>
+                    <input type="text" class="form-control" id="txtAddress" name="txtAddress"
+                           placeholder="Ejemplo: Calle Siempreviva 742" required>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-7">
                         <label for="txtCity">Ciudad</label>
                         <input type="text" class="form-control" id="txtCity" name="txtCity"
-                               placeholder="Escriba su Ciudad o Pueblo">
+                               placeholder="Escriba su Ciudad o Pueblo" required>
                     </div>
                     <div class="form-group col-md-5">
-                        <label for="inputState">Comuna</label>
-                        <select id="inputState" class="form-control">
-                            <option>Seleccione Comuna...</option>
+                        <label for="txtCommune">Comuna</label>
+                        <select id="txtCommune" class="form-control" required>
+                            <option value="">Seleccione Comuna...</option>
                             <option value="Aisén">Aisén</option>
                             <option value="Algarrobo">Algarrobo</option>
                             <option value="Alhué">Alhué</option>
@@ -425,7 +425,7 @@
                 <div class="form-group">
                     <label for="txtComment">Comentario</label>
                     <textarea type="text" class="form-control" id="txtComment" name="txtComment"
-                              placeholder="Ejemplo: Calle Siempreviva 742" rows="5"></textarea>
+                              placeholder="Escriba su Mensaje" rows="5" required></textarea>
                 </div>
                 <div class="form-group">
                     <div class="form-check">
@@ -435,7 +435,7 @@
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar Contacto</button>
+                <button id="sender" type="submit" class="btn btn-primary">Enviar Contacto</button>
             </form>
         </div>
     </div>
@@ -444,6 +444,10 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/localization/messages_es.min.js"></script>
+<script src="/assets/js/custom.js"></script>
 </body>
 
 </html>
